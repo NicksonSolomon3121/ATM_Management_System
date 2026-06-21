@@ -1,0 +1,88 @@
+class Modification:
+    def __init__(self,old_pin):
+        self.pin=old_pin
+        PIN=int(input("Entre a Old_PIN:"))
+        if(old_pin==PIN):
+            new_pin=int(input("Entre a New_PIN:"))
+            print("your PIN is changed successfully")
+        else:
+            print("your PIN is mismatch, so please verify your PIN_number") 
+class Deposite:
+    def __init__(self,amount):
+        j=int(input("Insert a Deposite amount:"))
+        print("Current_Balance:",j+amount)
+class Withdraw:
+    def __init__(self,get):
+        i=int(input("Entre a withdraw amount:"))
+        if(i>get):
+            print("Insufficient Balance")
+        else:
+            remaining=get-i
+            print("Remaining_balance:",remaining)            
+class Balance:
+    def __init__(self,check):
+        print("Balance:",check)
+class account:
+    def __init__(self):
+        pin=int(input("Entre a PIN:"))
+        if(pin==6028):
+            decision=input("check_Balance/cash_Withdraw/cash_Deposite/change_PIN:")
+            if(decision=="check_Balance"):
+                work1=Balance(Nick_Balance)
+            elif(decision=="cash_Withdraw"):
+                work2=Withdraw(Nick_Balance)
+            elif(decision=="cash_Deposite"):
+                work3=Deposite(Nick_Balance)
+            elif(decision=="change_PIN"):
+                work4=Modification(Nick_PIN)
+        elif(pin==6032):
+            decision=input("check_Balance/cash_Withdraw/cash_Deposite/change_PIN:")
+            if(decision=="check_Balance"):
+                work1=Balance(Prem_Balance)
+            elif(decision=="cash_Withdraw"):
+                work2=Withdraw(Prem_Balance)
+            elif(decision=="cash_Deposite"):
+                work3=Deposite(Prem_Balance)
+            elif(decision=="change_PIN"):
+                work4=Modification(Prem_PIN)
+        elif(pin==6042):
+            decision=input("check_Balance/cash_Withdraw/cash_Deposite/change_PIN:")
+            if(decision=="check_Balance"):
+                work1=Balance(Rack_Balance)
+            elif(decision=="cash_Withdraw"):
+                work2=Withdraw(Rack_Balance)
+            elif(decision=="cash_Deposite"):
+                work3=Deposite(Rack_Balance)
+            elif(decision=="change_PIN"):
+                work4=Modification(Rack_PIN)
+        else:
+            print("check your pin number")
+class details(account):
+    def __init__(self):
+        number=int(input("Ac_number:"))
+        if(number==960123106028):
+            print("USER:Nickson Solomon")
+            super().__init__()
+        elif(number==960123106032):
+            print("USER:Premkumar")
+            super().__init__()
+        elif(number==960123106042):
+            print("USER:Ponrackshana")
+            super().__init__()
+        else:
+            print("STRANGER")
+            
+Nick_PIN=6028
+Nick_Balance=500
+Prem_PIN=6032
+Prem_Balance=10000
+Rack_PIN=6042
+Rack_Balance=20000
+Ac_number=960123106028
+Ac_number=960123106032
+Ac_number=960123106042
+for m in range(1,100):
+    user=details()
+    print("=========================")
+
+
