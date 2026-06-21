@@ -1,10 +1,13 @@
 # ATM System
 
 ## Features
+- Multiple user account
+- Invalid user detection 
 - PIN Verification
 - Balance Enquiry
 - Cash Deposit
 - Cash Withdrawal
+- Object Oriented Programming
 
 ## Concepts Used
 - Class and Object
